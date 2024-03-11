@@ -43,7 +43,7 @@ async function loginUser() {
               };
 
 
-            window.location.href = `https://trip-planner-c50cde7e7986.herokuapp.com/mainpage1.html?${new URLSearchParams(hiddenParams)}`
+            window.location.href = `https://trip-planner-3mhw.onrender.com/mainpage1.html?${new URLSearchParams(hiddenParams)}`
 
         } else {
             window.alert("Login Failed");
