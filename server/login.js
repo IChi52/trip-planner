@@ -7,7 +7,7 @@ router.use(express.json());
 
 //MongoDB set up and start server
 //build url for config file info
-const url = `"mongodb+srv://user1:plannerUser1@cluster0.blwghus.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"`;
+const url = `"mongodb+srv://user1:plannerUser1@cluster0.blwghus.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"`
 const client = new MongoClient(url, { useUnifiedTopology: true });
 let collectionLogin = null; // initially null 
 

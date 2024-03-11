@@ -6,7 +6,7 @@ router.use(express.urlencoded({ extended: true }));
 router.use(express.json());
 
 const MongoClient = require('mongodb').MongoClient;
-const url = `"mongodb+srv://user1:plannerUser1@cluster0.blwghus.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"`;
+const url = `"mongodb+srv://user1:plannerUser1@cluster0.blwghus.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"`
 const client = new MongoClient(url, { useUnifiedTopology: true });
 let collection = null;
 let collectionLogin = null;
