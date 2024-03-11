@@ -31,23 +31,23 @@ function setNavLinks(){
       userEmail: userEmail,
     };
   
-    var homeLink = `https://trip-planner-c50cde7e7986.herokuapp.com/mainpage1.html?userEmail=` + encodeURIComponent(userEmail)+`&userName=`+ encodeURIComponent(userName);
+    var homeLink = `https://trip-planner-3mhw.onrender.com/mainpage1.html?userEmail=` + encodeURIComponent(userEmail)+`&userName=`+ encodeURIComponent(userName);
     var resultsLink =
-      `https://trip-planner-c50cde7e7986.herokuapp.com/searchresults.html?LAT=` +
+      `https://trip-planner-3mhw.onrender.com/searchresults.html?LAT=` +
       encodeURIComponent(valueLAT) +
       "&LONG=" +
       encodeURIComponent(valueLONG) +
       "&dist=" +
       encodeURIComponent(valueDist) + "&" + new URLSearchParams(hiddenParams);
       var addactivityLink =
-      `https://trip-planner-c50cde7e7986.herokuapp.com/addactivity.html?LAT=` +
+      `https://trip-planner-3mhw.onrender.com/addactivity.html?LAT=` +
       encodeURIComponent(valueLAT) +
       "&LONG=" +
       encodeURIComponent(valueLONG) +
       "&dist=" +
       encodeURIComponent(valueDist) + "&" + new URLSearchParams(hiddenParams);
       var favLink = 
-      `https://trip-planner-c50cde7e7986.herokuapp.com/favoriteslist.html?LAT=` +
+      `https://trip-planner-3mhw.onrender.com/favoriteslist.html?LAT=` +
       encodeURIComponent(valueLAT) +
       "&LONG=" +
       encodeURIComponent(valueLONG) +
@@ -66,7 +66,7 @@ let imageUrl ="";
 async function uploadFile(event) {
     event.preventDefault();
     const formData = new FormData(document.getElementById('uploadFormImage'));
-  const request =  await fetch('https://trip-planner-c50cde7e7986.herokuapp.com/activity/image', {
+  const request =  await fetch('https://trip-planner-3mhw.onrender.com/activity/image', {
       method: 'POST',
       body: formData
     });
@@ -118,7 +118,7 @@ async function activitySubmit(event) {
 
     }
 console.log(newActivity)
-  const request =   await fetch('https://trip-planner-c50cde7e7986.herokuapp.com/activity/add', {
+  const request =   await fetch('https://trip-planner-3mhw.onrender.com/activity/add', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(newActivity)

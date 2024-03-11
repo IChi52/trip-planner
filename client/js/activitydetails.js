@@ -64,23 +64,23 @@ function setNavLinks(){
     userEmail: userEmail,
   };
 
-  var homeLink = `https://trip-planner-c50cde7e7986.herokuapp.com/mainpage1.html?userEmail=` + encodeURIComponent(userEmail)+`&userName=`+ encodeURIComponent(userName);
+  var homeLink = `https://trip-planner-3mhw.onrender.com/mainpage1.html?userEmail=` + encodeURIComponent(userEmail)+`&userName=`+ encodeURIComponent(userName);
   var resultsLink =
-    `https://trip-planner-c50cde7e7986.herokuapp.com/searchresults.html?LAT=` +
+    `https://trip-planner-3mhw.onrender.com/searchresults.html?LAT=` +
     encodeURIComponent(valueLAT) +
     "&LONG=" +
     encodeURIComponent(valueLONG) +
     "&dist=" +
     encodeURIComponent(valueDist) + "&" + new URLSearchParams(hiddenParams);
     var addactivityLink =
-    `https://trip-planner-c50cde7e7986.herokuapp.com/addactivity.html?LAT=` +
+    `https://trip-planner-3mhw.onrender.com/addactivity.html?LAT=` +
     encodeURIComponent(valueLAT) +
     "&LONG=" +
     encodeURIComponent(valueLONG) +
     "&dist=" +
     encodeURIComponent(valueDist) + "&" + new URLSearchParams(hiddenParams);
     var favLink = 
-    `https://trip-planner-c50cde7e7986.herokuapp.com/favoriteslist.html?LAT=` +
+    `https://trip-planner-3mhw.onrender.com/favoriteslist.html?LAT=` +
     encodeURIComponent(valueLAT) +
     "&LONG=" +
     encodeURIComponent(valueLONG) +
@@ -116,7 +116,7 @@ async function AddComment() {
     console.log(activitiy._id)
 
     // add comment to server
-    const request = await fetch(`https://trip-planner-c50cde7e7986.herokuapp.com/review/add/${activitiy._id}`, {
+    const request = await fetch(`https://trip-planner-3mhw.onrender.com/review/add/${activitiy._id}`, {
         method: "POST",
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(data)
@@ -137,7 +137,7 @@ async function AddComment() {
 
 
 function getActivity(id) {
-    fetch(`https://trip-planner-c50cde7e7986.herokuapp.com/activity/get/${id}`, {
+    fetch(`https://trip-planner-3mhw.onrender.com/activity/get/${id}`, {
         method: "GET"
     })
         .then(res => res.text())
@@ -157,7 +157,7 @@ console.log("activitiy._id is ", activitiy._id)
 let map;
 let geocoder;
 function initMap() {
-    fetch(`https://trip-planner-c50cde7e7986.herokuapp.com/activity/get/${activitiy._id}`, {
+    fetch(`https://trip-planner-3mhw.onrender.com/activity/get/${activitiy._id}`, {
         method: 'GET',
         headers: {
             "Content-Type": "application/json",

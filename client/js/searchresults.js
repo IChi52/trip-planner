@@ -15,7 +15,7 @@ const valueDist = params.get('dist');
 console.log(valueLAT + valueLONG )
 
   try {
-    const response = await fetch("https://trip-planner-c50cde7e7986.herokuapp.com/activity/search", 
+    const response = await fetch("https://trip-planner-3mhw.onrender.com/activity/search", 
     { method: "POST" ,
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify(
@@ -42,23 +42,23 @@ results = responseData
     userEmail: userEmail,
   };
 
-  var homeLink = `https://trip-planner-c50cde7e7986.herokuapp.com/mainpage1.html?userEmail=` + encodeURIComponent(userEmail)+`&userName=`+ encodeURIComponent(userName);
+  var homeLink = `https://trip-planner-3mhw.onrender.com/mainpage1.html?userEmail=` + encodeURIComponent(userEmail)+`&userName=`+ encodeURIComponent(userName);
   var resultsLink =
-    `https://trip-planner-c50cde7e7986.herokuapp.com/searchresults.html?LAT=` +
+    `https://trip-planner-3mhw.onrender.com/searchresults.html?LAT=` +
     encodeURIComponent(valueLAT) +
     "&LONG=" +
     encodeURIComponent(valueLONG) +
     "&dist=" +
     encodeURIComponent(valueDist) + "&" + new URLSearchParams(hiddenParams);
     var addactivityLink =
-    `https://trip-planner-c50cde7e7986.herokuapp.com/addactivity.html?LAT=` +
+    `https://trip-planner-3mhw.onrender.com/addactivity.html?LAT=` +
     encodeURIComponent(valueLAT) +
     "&LONG=" +
     encodeURIComponent(valueLONG) +
     "&dist=" +
     encodeURIComponent(valueDist) + "&" + new URLSearchParams(hiddenParams);
     var favLink = 
-    `https://trip-planner-c50cde7e7986.herokuapp.com/favoriteslist.html?LAT=` +
+    `https://trip-planner-3mhw.onrender.com/favoriteslist.html?LAT=` +
     encodeURIComponent(valueLAT) +
     "&LONG=" +
     encodeURIComponent(valueLONG) +
@@ -173,14 +173,14 @@ function DetailBtnEvent(){
           const valueDist = params.get('dist');
           
           try {
-            window.location.href = `https://trip-planner-c50cde7e7986.herokuapp.com/activitydetail.html?LAT=` +
+            window.location.href = `https://trip-planner-3mhw.onrender.com/activitydetail.html?LAT=` +
             encodeURIComponent(valueLAT) +
             "&LONG=" +
             encodeURIComponent(valueLONG) +
             "&dist=" +
             encodeURIComponent(valueDist) + "&" + new URLSearchParams(hiddenParams);
           } catch (e) {
-            window.location.href = `https://trip-planner-c50cde7e7986.herokuapp.com/activitydetail.html?`+new URLSearchParams(hiddenParams);
+            window.location.href = `https://trip-planner-3mhw.onrender.com/activitydetail.html?`+new URLSearchParams(hiddenParams);
           }
 
           

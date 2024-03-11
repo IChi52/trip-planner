@@ -19,7 +19,7 @@ window.onload = function () {
 //   var userName = params.get("userName");
   var userEmail = params.get("userEmail");
 
- var favlink = `https://trip-planner-c50cde7e7986.herokuapp.com/favoriteslist.html?userEmail=`+encodeURIComponent( userEmail);
+ var favlink = `https://trip-planner-3mhw.onrender.com/favoriteslist.html?userEmail=`+encodeURIComponent( userEmail);
 
     console.log(favlink);
     document.getElementById("favourites").href = favlink;
@@ -46,23 +46,23 @@ function setNavLinks(){
       userEmail: userEmail,
     };
   
-    var homeLink = `https://trip-planner-c50cde7e7986.herokuapp.com/mainpage1.html?userEmail=` + encodeURIComponent(userEmail)+`&userName=`+ encodeURIComponent(userName);
+    var homeLink = `https://trip-planner-3mhw.onrender.com/mainpage1.html?userEmail=` + encodeURIComponent(userEmail)+`&userName=`+ encodeURIComponent(userName);
     var resultsLink =
-      `https://trip-planner-c50cde7e7986.herokuapp.com/searchresults.html?LAT=` +
+      `https://trip-planner-3mhw.onrender.com/searchresults.html?LAT=` +
       encodeURIComponent(valueLAT) +
       "&LONG=" +
       encodeURIComponent(valueLONG) +
       "&dist=" +
       encodeURIComponent(valueDist) + "&" + new URLSearchParams(hiddenParams);
       var addactivityLink =
-      `https://trip-planner-c50cde7e7986.herokuapp.com/addactivity.html?LAT=` +
+      `https://trip-planner-3mhw.onrender.com/addactivity.html?LAT=` +
       encodeURIComponent(valueLAT) +
       "&LONG=" +
       encodeURIComponent(valueLONG) +
       "&dist=" +
       encodeURIComponent(valueDist) + "&" + new URLSearchParams(hiddenParams);
       var favLink = 
-      `https://trip-planner-c50cde7e7986.herokuapp.com/favoriteslist.html?LAT=` +
+      `https://trip-planner-3mhw.onrender.com/favoriteslist.html?LAT=` +
       encodeURIComponent(valueLAT) +
       "&LONG=" +
       encodeURIComponent(valueLONG) +
@@ -79,7 +79,7 @@ function setNavLinks(){
 
 var results = [];
 async function getSearchResults() {
-    let response = await fetch(`https://trip-planner-c50cde7e7986.herokuapp.com/favourite/${userEmailLogged}`,{method:"GET"})
+    let response = await fetch(`https://trip-planner-3mhw.onrender.com/favourite/${userEmailLogged}`,{method:"GET"})
     let searchResults = await response.json()
     console.log("Search results retrieved");
     console.log(searchResults.favourite[0].favourite)
@@ -151,7 +151,7 @@ function redirectTOAbout(activityName) {
       userEmail: userEmail,
     };
     var addactivityLink =
-      `https://trip-planner-c50cde7e7986.herokuapp.com/activitydetail.html?LAT=` +
+      `https://trip-planner-3mhw.onrender.com/activitydetail.html?LAT=` +
       encodeURIComponent(valueLAT) +
       "&LONG=" +
       encodeURIComponent(valueLONG) +
@@ -169,7 +169,7 @@ async function deleteFav(activityName) {
         activityName:activityName
     }
 
-    const request =   await fetch('https://trip-planner-c50cde7e7986.herokuapp.com/favourite/delete', {
+    const request =   await fetch('https://trip-planner-3mhw.onrender.com/favourite/delete', {
         method: 'DELETE',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(deleteBody)
