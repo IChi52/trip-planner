@@ -14,120 +14,120 @@ let collectionFavourites = null;
 
 
 //Insert some data for  favourites
-const insertOneStarterDataFavourites = async function () {
-    return collectionFavourites.insertMany([
-        {
-            _id: "testNew@gmail.com", favourite: [{
-                _id: "1", activityName: 'St Andrews West Sands Beach', lat: 56.35622, long: -2.80834, location: "West Sands",
-                age: "5+", type: 'Beaches', price: "20",
-                decription: "", images: ["https://images.pexels.com/photos/994605/pexels-photo-994605.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1", "https://images.pexels.com/photos/635279/pexels-photo-635279.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"],
-                reviews: [{ userName: "Cath", comment: "Love the Sunset", rating: "4" }, { userName: "Rambo", comment: "The weather is too cold, but was fun", rating: "3" }]
-            },{
+// const insertOneStarterDataFavourites = async function () {
+//     return collectionFavourites.insertMany([
+//         {
+//             _id: "testNew@gmail.com", favourite: [{
+//                 _id: "1", activityName: 'St Andrews West Sands Beach', lat: 56.35622, long: -2.80834, location: "West Sands",
+//                 age: "5+", type: 'Beaches', price: "20",
+//                 decription: "", images: ["https://images.pexels.com/photos/994605/pexels-photo-994605.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1", "https://images.pexels.com/photos/635279/pexels-photo-635279.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"],
+//                 reviews: [{ userName: "Cath", comment: "Love the Sunset", rating: "4" }, { userName: "Rambo", comment: "The weather is too cold, but was fun", rating: "3" }]
+//             },{
 
-                _id: "3", activityName: 'Tower of London', lat: 51.50853, long: -0.07613, location: "London",
+//                 _id: "3", activityName: 'Tower of London', lat: 51.50853, long: -0.07613, location: "London",
     
-                age: "10+", type: 'Historic Sites', price: "30",
+//                 age: "10+", type: 'Historic Sites', price: "30",
     
-                decription: "Famous Tower of London where lots of royals died", images: ["https://upload.wikimedia.org/wikipedia/commons/5/5a/La_Torre%2C_Londres%2C_Inglaterra%2C_2014-08-11%2C_DD_071.JPG", "https://upload.wikimedia.org/wikipedia/commons/e/ec/Tower_of_London_from_the_Shard_%288515883950%29.jpg", "https://upload.wikimedia.org/wikipedia/commons/1/1e/Whitetowerlondon.jpg"],
+//                 decription: "Famous Tower of London where lots of royals died", images: ["https://upload.wikimedia.org/wikipedia/commons/5/5a/La_Torre%2C_Londres%2C_Inglaterra%2C_2014-08-11%2C_DD_071.JPG", "https://upload.wikimedia.org/wikipedia/commons/e/ec/Tower_of_London_from_the_Shard_%288515883950%29.jpg", "https://upload.wikimedia.org/wikipedia/commons/1/1e/Whitetowerlondon.jpg"],
     
-                reviews: [{ userName: "Calvin", comment: "so cool, wow.", rating: "1" }, { userName: "Tim", comment: "Best for short visit", rating: "3" }]
+//                 reviews: [{ userName: "Calvin", comment: "so cool, wow.", rating: "1" }, { userName: "Tim", comment: "Best for short visit", rating: "3" }]
     
-            },{
+//             },{
 
-                _id: "5", activityName: 'Birdwatching', lat: 56.35910, long: -2.89052, location: "Guardbridge",
+//                 _id: "5", activityName: 'Birdwatching', lat: 56.35910, long: -2.89052, location: "Guardbridge",
     
     
     
-                age: "60+", type: 'Outdoors', price: "0",
+//                 age: "60+", type: 'Outdoors', price: "0",
     
-                decription: "Cool birds in Guardbridge", images: ["https://upload.wikimedia.org/wikipedia/commons/0/07/Foto_Marcelo_Sirkis_3_%2849574785843%29.jpg", "https://upload.wikimedia.org/wikipedia/commons/b/b6/Pica_pica_-_Compans_Caffarelli_-_2012-03-16.jpg", "https://upload.wikimedia.org/wikipedia/commons/3/3b/Blauelester_donana.jpg"],
+//                 decription: "Cool birds in Guardbridge", images: ["https://upload.wikimedia.org/wikipedia/commons/0/07/Foto_Marcelo_Sirkis_3_%2849574785843%29.jpg", "https://upload.wikimedia.org/wikipedia/commons/b/b6/Pica_pica_-_Compans_Caffarelli_-_2012-03-16.jpg", "https://upload.wikimedia.org/wikipedia/commons/3/3b/Blauelester_donana.jpg"],
     
-                reviews: []
+//                 reviews: []
     
-            },{
+//             },{
 
-                _id: "7", activityName: 'Machu Picchu', lat: -13.16307, long: -72.54512, location: "Peru",
+//                 _id: "7", activityName: 'Machu Picchu', lat: -13.16307, long: -72.54512, location: "Peru",
     
-                age: "20+", type: 'Outdoors', price: "0",
+//                 age: "20+", type: 'Outdoors', price: "0",
     
-                decription: "", images: ["https://upload.wikimedia.org/wikipedia/commons/1/13/Before_Machu_Picchu.jpg", "https://upload.wikimedia.org/wikipedia/commons/0/09/Machu_Picchu_%283833992683%29.jpg", "https://upload.wikimedia.org/wikipedia/commons/5/59/Machupicchu_intihuatana.JPG"],
+//                 decription: "", images: ["https://upload.wikimedia.org/wikipedia/commons/1/13/Before_Machu_Picchu.jpg", "https://upload.wikimedia.org/wikipedia/commons/0/09/Machu_Picchu_%283833992683%29.jpg", "https://upload.wikimedia.org/wikipedia/commons/5/59/Machupicchu_intihuatana.JPG"],
     
-                reviews: [{ userName: "Bill", comment: "bucket list", rating: "5" }]
+//                 reviews: [{ userName: "Bill", comment: "bucket list", rating: "5" }]
     
-            },{
+//             },{
 
-                _id: "9", activityName: 'Cromars Fish and Chips', lat: 56.33871, long: -2.79902, location: "St Andrews",
+//                 _id: "9", activityName: 'Cromars Fish and Chips', lat: 56.33871, long: -2.79902, location: "St Andrews",
     
-                age: "10+", type: 'Dining', price: "20",
-    
-    
-    
-                decription: "Overpriced fish and chips", images: ["https://upload.wikimedia.org/wikipedia/commons/f/ff/Fish_and_chips_blackpool.jpg", "https://upload.wikimedia.org/wikipedia/commons/7/76/Fish_and_chips.jpg", "https://upload.wikimedia.org/wikipedia/commons/9/99/Mobile_Fish_and_Chips.JPG"],
-    
-                reviews: [{ userName: "Calvin", comment: "so cool, wow.", rating: "1" }, { userName: "Tim", comment: "Best for short visit", rating: "3" }]
+//                 age: "10+", type: 'Dining', price: "20",
     
     
+    
+//                 decription: "Overpriced fish and chips", images: ["https://upload.wikimedia.org/wikipedia/commons/f/ff/Fish_and_chips_blackpool.jpg", "https://upload.wikimedia.org/wikipedia/commons/7/76/Fish_and_chips.jpg", "https://upload.wikimedia.org/wikipedia/commons/9/99/Mobile_Fish_and_Chips.JPG"],
+    
+//                 reviews: [{ userName: "Calvin", comment: "so cool, wow.", rating: "1" }, { userName: "Tim", comment: "Best for short visit", rating: "3" }]
     
     
     
     
     
-            }]
-        },
-        {
-            _id: "test@gmail.com", favourite: [{
-                _id: "1", activityName: 'St Andrews West Sands Beach', lat: 56.35622, long: -2.80834, location: "West Sands",
-                age: "5+", type: 'Beaches', price: "20",
-                decription: "", images: ["https://images.pexels.com/photos/994605/pexels-photo-994605.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1", "https://images.pexels.com/photos/635279/pexels-photo-635279.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"],
-                reviews: [{ userName: "Cath", comment: "Love the Sunset", rating: "4" }, { userName: "Rambo", comment: "The weather is too cold, but was fun", rating: "3" }]
-            },{
+    
+    
+//             }]
+//         },
+//         {
+//             _id: "test@gmail.com", favourite: [{
+//                 _id: "1", activityName: 'St Andrews West Sands Beach', lat: 56.35622, long: -2.80834, location: "West Sands",
+//                 age: "5+", type: 'Beaches', price: "20",
+//                 decription: "", images: ["https://images.pexels.com/photos/994605/pexels-photo-994605.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1", "https://images.pexels.com/photos/635279/pexels-photo-635279.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"],
+//                 reviews: [{ userName: "Cath", comment: "Love the Sunset", rating: "4" }, { userName: "Rambo", comment: "The weather is too cold, but was fun", rating: "3" }]
+//             },{
 
-                _id: "7", activityName: 'Machu Picchu', lat: -13.16307, long: -72.54512, location: "Peru",
+//                 _id: "7", activityName: 'Machu Picchu', lat: -13.16307, long: -72.54512, location: "Peru",
     
-                age: "20+", type: 'Outdoors', price: "0",
+//                 age: "20+", type: 'Outdoors', price: "0",
     
-                decription: "", images: ["https://upload.wikimedia.org/wikipedia/commons/1/13/Before_Machu_Picchu.jpg", "https://upload.wikimedia.org/wikipedia/commons/0/09/Machu_Picchu_%283833992683%29.jpg", "https://upload.wikimedia.org/wikipedia/commons/5/59/Machupicchu_intihuatana.JPG"],
+//                 decription: "", images: ["https://upload.wikimedia.org/wikipedia/commons/1/13/Before_Machu_Picchu.jpg", "https://upload.wikimedia.org/wikipedia/commons/0/09/Machu_Picchu_%283833992683%29.jpg", "https://upload.wikimedia.org/wikipedia/commons/5/59/Machupicchu_intihuatana.JPG"],
     
-                reviews: [{ userName: "Bill", comment: "bucket list", rating: "5" }]
+//                 reviews: [{ userName: "Bill", comment: "bucket list", rating: "5" }]
     
-            },{
+//             },{
 
-                _id: "9", activityName: 'Cromars Fish and Chips', lat: 56.33871, long: -2.79902, location: "St Andrews",
+//                 _id: "9", activityName: 'Cromars Fish and Chips', lat: 56.33871, long: -2.79902, location: "St Andrews",
     
-                age: "10+", type: 'Dining', price: "20",
-    
-    
-    
-                decription: "Overpriced fish and chips", images: ["https://upload.wikimedia.org/wikipedia/commons/f/ff/Fish_and_chips_blackpool.jpg", "https://upload.wikimedia.org/wikipedia/commons/7/76/Fish_and_chips.jpg", "https://upload.wikimedia.org/wikipedia/commons/9/99/Mobile_Fish_and_Chips.JPG"],
-    
-                reviews: [{ userName: "Calvin", comment: "so cool, wow.", rating: "1" }, { userName: "Tim", comment: "Best for short visit", rating: "3" }]
+//                 age: "10+", type: 'Dining', price: "20",
     
     
+    
+//                 decription: "Overpriced fish and chips", images: ["https://upload.wikimedia.org/wikipedia/commons/f/ff/Fish_and_chips_blackpool.jpg", "https://upload.wikimedia.org/wikipedia/commons/7/76/Fish_and_chips.jpg", "https://upload.wikimedia.org/wikipedia/commons/9/99/Mobile_Fish_and_Chips.JPG"],
+    
+//                 reviews: [{ userName: "Calvin", comment: "so cool, wow.", rating: "1" }, { userName: "Tim", comment: "Best for short visit", rating: "3" }]
     
     
     
     
     
-            },{
+    
+    
+//             },{
 
-                _id: "3", activityName: 'Tower of London', lat: 51.50853, long: -0.07613, location: "London",
+//                 _id: "3", activityName: 'Tower of London', lat: 51.50853, long: -0.07613, location: "London",
     
-                age: "10+", type: 'Historic Sites', price: "30",
+//                 age: "10+", type: 'Historic Sites', price: "30",
     
-                decription: "Famous Tower of London where lots of royals died", images: ["https://upload.wikimedia.org/wikipedia/commons/5/5a/La_Torre%2C_Londres%2C_Inglaterra%2C_2014-08-11%2C_DD_071.JPG", "https://upload.wikimedia.org/wikipedia/commons/e/ec/Tower_of_London_from_the_Shard_%288515883950%29.jpg", "https://upload.wikimedia.org/wikipedia/commons/1/1e/Whitetowerlondon.jpg"],
+//                 decription: "Famous Tower of London where lots of royals died", images: ["https://upload.wikimedia.org/wikipedia/commons/5/5a/La_Torre%2C_Londres%2C_Inglaterra%2C_2014-08-11%2C_DD_071.JPG", "https://upload.wikimedia.org/wikipedia/commons/e/ec/Tower_of_London_from_the_Shard_%288515883950%29.jpg", "https://upload.wikimedia.org/wikipedia/commons/1/1e/Whitetowerlondon.jpg"],
     
-                reviews: [{ userName: "Calvin", comment: "so cool, wow.", rating: "1" }, { userName: "Tim", comment: "Best for short visit", rating: "3" }]
+//                 reviews: [{ userName: "Calvin", comment: "so cool, wow.", rating: "1" }, { userName: "Tim", comment: "Best for short visit", rating: "3" }]
     
-            }]
-        }
-    ])
-        .then(res => console.log("data inserted in Fav with ID", res.insertedIds))
-        .catch(err => {
-            console.log("Could not add data ", err.message);
-            //For now, ingore duplicate entry errors, otherwise re-throw the error for the next catch
-            if (err.name != 'MongoBulkWriteError' || err.code != 11000) throw err;
-        })
-}
+//             }]
+//         }
+//     ])
+//         .then(res => console.log("data inserted in Fav with ID", res.insertedIds))
+//         .catch(err => {
+//             console.log("Could not add data ", err.message);
+//             //For now, ingore duplicate entry errors, otherwise re-throw the error for the next catch
+//             if (err.name != 'MongoBulkWriteError' || err.code != 11000) throw err;
+//         })
+// }
 
 
 client.connect()
