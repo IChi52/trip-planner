@@ -46,17 +46,17 @@ function setNavLinks(){
       userEmail: userEmail,
     };
   
-    var homeLink = `https://trip-planner-c50cde7e7986.herokuapp.com/mainpage1.html?userEmail=` + encodeURIComponent(userEmail)+`&userName=`+ encodeURIComponent(userName);
+    var homeLink = `https://trip-planner-3mhw.onrender.com/mainpage1.html?userEmail=` + encodeURIComponent(userEmail)+`&userName=`+ encodeURIComponent(userName);
     
       var addactivityLink =
-      `https://trip-planner-c50cde7e7986.herokuapp.com/forhome/addactivity.html?LAT=` +
+      `https://trip-planner-3mhw.onrender.com/forhome/addactivity.html?LAT=` +
       encodeURIComponent(valueLAT) +
       "&LONG=" +
       encodeURIComponent(valueLONG) +
       "&dist=" +
       encodeURIComponent(valueDist) + "&" + new URLSearchParams(hiddenParams);
       var favLink = 
-      `https://trip-planner-c50cde7e7986.herokuapp.com/forhome/favoriteslist.html?LAT=` +
+      `https://trip-planner-3mhw.onrender.com/forhome/favoriteslist.html?LAT=` +
       encodeURIComponent(valueLAT) +
       "&LONG=" +
       encodeURIComponent(valueLONG) +
@@ -73,7 +73,7 @@ function setNavLinks(){
 
 var results = [];
 async function getSearchResults() {
-    let response = await fetch(`https://trip-planner-c50cde7e7986.herokuapp.com/favourite/${userEmailLogged}`,{method:"GET"})
+    let response = await fetch(`https://trip-planner-3mhw.onrender.com/favourite/${userEmailLogged}`,{method:"GET"})
     let searchResults = await response.json()
     console.log("Search results retrieved");
     console.log(searchResults.favourite[0].favourite)
@@ -144,7 +144,7 @@ function redirectTOAbout(activityName) {
       userEmail: userEmail,
     };
     var addactivityLink =
-      `https://trip-planner-c50cde7e7986.herokuapp.com/forhome/activitydetail.html?LAT=` +
+      `https://trip-planner-3mhw.onrender.com/forhome/activitydetail.html?LAT=` +
       encodeURIComponent(valueLAT) +
       "&LONG=" +
       encodeURIComponent(valueLONG) +
@@ -163,7 +163,7 @@ async function deleteFav(activityName) {
         activityName:activityName
     }
 
-    const request =   await fetch('https://trip-planner-c50cde7e7986.herokuapp.com/favourite/delete', {
+    const request =   await fetch('https://trip-planner-3mhw.onrender.com/favourite/delete', {
         method: 'DELETE',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(deleteBody)
