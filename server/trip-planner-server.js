@@ -22,7 +22,7 @@ const favourite = require('./favourite')
 // connect to MongoDB Atlas
 //const url = "mongodb+srv://user1:plannerUser1@cluster0.mongodb.net/?retryWrites=true&w=majority";
 const url = "mongodb+srv://user1:plannerUser1@cluster0.blwghus.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
-
+console.log(url)
 const client = new MongoClient(url, { useUnifiedTopology: true });
 client.connect(err => {
     const collection = client.db("TripPlanner").collection("Events");
