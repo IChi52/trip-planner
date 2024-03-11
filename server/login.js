@@ -50,7 +50,7 @@ client.connect()
     })
    // .then(() => client.db().collection("login").drop()).then(()=>console.log("droped login"))
 //.then(() => createCollectionLogin()) // invoke createCollectionLogin if not created 
-.then(() => insertOneStarterDataLogin()) //invoke insert data for loading initial data 
+//.then(() => insertOneStarterDataLogin()) //invoke insert data for loading initial data 
 
 
 //MongoDB set up and start server end
