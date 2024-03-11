@@ -144,7 +144,7 @@ client.connect()
         console.log(`Error in connecting to Database ${url.replace(/:([^:@]{1,})@/, ':****@')}`, err);
     })
     //.then(() => client.db().collection("favourite").drop()).then(()=>console.log("droped fav")) //--> to delete collection
-    .then(() => insertOneStarterDataFavourites()) //--> to inset data
+    //.then(() => insertOneStarterDataFavourites()) //--> to inset data
 //.then(()=>collectionFavourites.deleteOne({_id:"yash@gmail.com"})).then(()=>{console.log("deleted")}).catch(()=>console.log("err"))
 
 
