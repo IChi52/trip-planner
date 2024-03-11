@@ -20,7 +20,9 @@ const config = require('./config-db.js');
 // const url = `mongodb://${config.username}:${config.password}@${config.url}:${config.port}/${config.database}?authSource=admin`;
 
 // connect to MongoDB Atlas
-const url = "mongodb+srv://user1:plannerUser1@cluster0.mongodb.net/?retryWrites=true&w=majority";
+//const url = "mongodb+srv://user1:plannerUser1@cluster0.mongodb.net/?retryWrites=true&w=majority";
+const url = "mongodb+srv://user1:plannerUser1@cluster0.blwghus.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0";
+
 const client = new MongoClient(url, { useUnifiedTopology: true });
 client.connect(err => {
     const collection = client.db("TripPlanner").collection("Events");
