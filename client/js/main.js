@@ -133,7 +133,7 @@ async function searchFromServer() {
   };
   checkLogin(userEmail)
   window.location.href =
-    `https://trip-planner-c50cde7e7986.herokuapp.com/searchresults.html?LAT=` +
+    `https://trip-planner-3mhw.onrender.com/searchresults.html?LAT=` +
     encodeURIComponent(document.getElementById("lat").value) +
     "&LONG=" +
     encodeURIComponent(document.getElementById("long").value) +
@@ -202,7 +202,7 @@ function DetailBtnEvent() {
       };
 
 
-      window.location.href = `https://trip-planner-c50cde7e7986.herokuapp.com/forhome/activitydetail.html?` + new URLSearchParams(hiddenParams);
+      window.location.href = `https://trip-planner-3mhw.onrender.com/forhome/activitydetail.html?` + new URLSearchParams(hiddenParams);
     })
   }
 }
