@@ -8,9 +8,9 @@ window.onload = async function () {
 
 
 
-  var favlink = `https://trip-planner-c50cde7e7986.herokuapp.com/forhome/favoriteslist.html?userEmail=` + encodeURIComponent(userEmail) + "&userName=" +
+  var favlink = `https://trip-planner-3mhw.onrender.com/forhome/favoriteslist.html?userEmail=` + encodeURIComponent(userEmail) + "&userName=" +
     encodeURIComponent(userName);
-  var addActivitylink = `https://trip-planner-c50cde7e7986.herokuapp.com/addactivity.html?userEmail=` + encodeURIComponent(userEmail) + "&userName=" +
+  var addActivitylink = `https://trip-planner-3mhw.onrender.com/addactivity.html?userEmail=` + encodeURIComponent(userEmail) + "&userName=" +
     encodeURIComponent(userName);
 
 
@@ -31,7 +31,7 @@ function checkLogin(userEmail) {
 }
 var results;
 async function top10() {
-  const response = await fetch("https://trip-planner-c50cde7e7986.herokuapp.com/activity/get/5star",
+  const response = await fetch("https://trip-planner-3mhw.onrender.com/activity/get/5star",
     { method: "GET" });
   const responseData = await response.json();
   console.log(responseData);
