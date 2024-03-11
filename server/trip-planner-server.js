@@ -15,7 +15,7 @@ const favourite = require('./favourite')
 
 //MongoDB set up ans start server
 //build url for config file info
-const config = require('./config-db.js');
+// const config = require('./config-db.js');
 // connect to local Mongo server
 // const url = `mongodb://${config.username}:${config.password}@${config.url}:${config.port}/${config.database}?authSource=admin`;
 
@@ -37,9 +37,9 @@ app.use('/images', express.static(path.join(__dirname, 'images')));
 console.log(path.join(__dirname, '/images'))
 //creates a collection
 const createCollection = async function () {
-    return client.db().createCollection(config.collection)
+    return client.db().createCollection(`${Events}`)
         .then(() => {
-            collection = client.db().collection(config.collection); //initialise our global variable so it can be used later
+            collection = client.db().collection(`${Events}`); //initialise our global variable so it can be used later
             console.log("Collection created!");
         })
         .catch(err => {

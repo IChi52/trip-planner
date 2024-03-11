@@ -6,8 +6,7 @@ router.use(express.urlencoded({ extended: true }));
 router.use(express.json());
 
 const MongoClient = require('mongodb').MongoClient;
-const config = require('./config-db.js');
-const url = `mongodb://${config.username}:${config.password}@${config.url}:${config.port}/${config.database}?authSource=admin`;
+const url = `"mongodb+srv://user1:plannerUser1@cluster0.blwghus.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"`;
 const client = new MongoClient(url, { useUnifiedTopology: true });
 let collection = null;
 let collectionLogin = null;
@@ -135,7 +134,7 @@ client.connect()
     .then(
         connection => {
             //if collection is not present it is automatically created 
-            collection = client.db().collection(config.collection); //comment this when createCollection() is uncommented
+            // collection = client.db().collection(config.collection); //comment this when createCollection() is uncommented
             collectionLogin = client.db().collection("login");
             collectionFavourites = client.db().collection("favourite")
             console.log("Favourite: Connected to Database");
