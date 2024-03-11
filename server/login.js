@@ -13,19 +13,19 @@ let collectionLogin = null; // initially null
 
 
 //Insert some data for testing  
-const insertOneStarterDataLogin = async function () {
-    return collectionLogin.insertMany([
-         { _id: "test@gmail.com", userEmail: "test@gmail.com", userName: "Test", password: "test@123" },
-         { _id: "testNew@gmail.com", userEmail: "testNew@gmail.com", userName: "testNew", password: "testNew@123" },
-        // { _id: "yash@gmail.com", userEmail: "yash@gmail.com", userName: "Yash", password: "yash@123" }
-    ])
-        .then(res => console.log("data inserted with ID", res.insertedIds))
-        .catch(err => {
-            console.log("Could not add data ", err.message);
-            //For now, ingore duplicate entry errors, otherwise re-throw the error for the next catch
-            if (err.name != 'MongoBulkWriteError' || err.code != 11000) throw err;
-        })
-}
+// const insertOneStarterDataLogin = async function () {
+//     return collectionLogin.insertMany([
+//          { _id: "test@gmail.com", userEmail: "test@gmail.com", userName: "Test", password: "test@123" },
+//          { _id: "testNew@gmail.com", userEmail: "testNew@gmail.com", userName: "testNew", password: "testNew@123" },
+//         // { _id: "yash@gmail.com", userEmail: "yash@gmail.com", userName: "Yash", password: "yash@123" }
+//     ])
+//         .then(res => console.log("data inserted with ID", res.insertedIds))
+//         .catch(err => {
+//             console.log("Could not add data ", err.message);
+//             //For now, ingore duplicate entry errors, otherwise re-throw the error for the next catch
+//             if (err.name != 'MongoBulkWriteError' || err.code != 11000) throw err;
+//         })
+// }
 
 //Find data from database based on query
 const findMany = async function (query) {
